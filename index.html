@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html>                                                                  
+ <head>                     
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"> 
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="styles.css"> 
+                                            
+ <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> 
+ <script type="text/javascript" src="jquery.js"></script>          
+ <script type="text/javascript"></script>
+ <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+ <script src="test-canvas.js" type="text/javascript"></script> 
+
+ 
+ 
+<script>
+	$(document).ready(function() {
+		  
+	}); 
+	</script> 	                
+       
+                                                         
+ </head>                                                                 
+ <body> 
+
+  <div class="row-fluid">
+	  <div class="span2 offset1"><p>this is the head</p></div>
+	  <div class="span5">
+		<div class="wrapper">
+			<div class="overlay"></div>
+			<canvas id="colors_sketch" width="490" height="220" style="border:1px solid #000000;"></canvas> 
+		</div>
+	 </div>
+
+	 <div class="span2">
+	    <form>
+  	    <fieldset>
+	    <legend>Monster's Name</legend>
+	    <label>Name your Monster so you can find it later.</label>
+	    <input type="text" placeholder="Name your Monster">
+	    <button type="submit" class="btn">Submit</button>
+	  </fieldset>
+	</form>
+	</div>
+</div> 
+
+	<script>
+            $(function() {
+              $('#colors_sketch').sketch();
+            });
+        </script> 
+   <div class="row-fluid"> 
+       <div class="span6 offset3">
+	<div class="tools">
+	  <a href="#colors_sketch" data-color="#ff0" style="width: 10px; background: #ff0;">yellow</a>
+	  <a href="#colors_sketch" data-color="#f00" style="width: 10px; background: #f00;">red</a> 
+	  <a href="#colors_sketch" data-color="#f0f" style="width: 10px; background: #f0f;">purple</a>
+	  <a href="#colors_sketch" data-color="#0ff" style="width: 10px; background: #0ff;">bluew</a>
+	  <a href="#colors_sketch" data-color="#0f0" style="width: 10px; background: #0f0;">green</a> 
+ 	  <a href="#colors_sketch" data-color="#000" style="width: 10px; background: #000;">black</a>
+  	  <a href="#colors_sketch" data-color="#fff" style="width: 10px; background: #fff;">eraser</a>
+	  <a href="#colors_sketch" data-size="3" style="background: #ccc">small</a>
+ 	  <a href="#colors_sketch" data-size="10" style="background: #ccc">medium</a>
+	  <a href="#colors_sketch" data-size="15" style="background: #ccc">large</a>
+  	  <a href="#colors_sketch" data-download="png" style="width:20px;">Download</a>	
+	</div>
+   </div>
+	</div>
+
+	<div class="row-fluid">
+	  <div class="span2 offset1"><p>this is the body</p></div>
+	  <div class="span5 "> <canvas id="greyCanvas" width="490" height="220"></canvas>
+	  </div>
+	</div> 
+
+	
+	
+	<div class="row-fluid">
+	  <div class="span2 offset1"><p>these are the legs</p></div>
+	  <div class="span5"><canvas id="greyCanvas" width="490" height="220"></canvas>
+		</div>
+	</div> 
+ 
+	
+	                                 
+	
+	<canvas id="colors_sketch" width="800" height="300"></canvas>
+	<script type="text/javascript">
+	  $(function() {
+	    $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
+	      $('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
+	    });
+	    $.each([3, 5, 10, 15], function() {
+	      $('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
+	    });
+	    $('#colors_sketch').sketch();
+	  });
+	</script>
+	
+	<img class=myImg scr="");></img>
+        
+                                                              
+   <!-- firebase --> 
+
+</script>
+	                                    
+ </body>                                                                 
+ </html>
